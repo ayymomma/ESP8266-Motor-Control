@@ -9,6 +9,7 @@
 const char *ssid =  "DIGI-T53k";    
 const char *pass =  "TF359U9k";
 
+
 const uint16_t port = 50100;
 const char *host = "192.168.100.44";
 
@@ -55,6 +56,7 @@ void setup()
       while (WiFi.status() != WL_CONNECTED) 
       {
             delay(500);
+            Serial.println(".");
       }
       if(!client.connect(host, port)){
       Serial.println("Connection failed!");
