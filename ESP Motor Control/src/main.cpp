@@ -6,12 +6,13 @@
 #define ANALOGPIN A0
 
 
-const char *ssid =  "DIGI-T53k";    
-const char *pass =  "TF359U9k";
-
+// const char *ssid =  "DIGI-T53k";    
+// const char *pass =  "TF359U9k";
+const char *ssid = "ureche";
+const char *pass = "qwerty123";
 
 const uint16_t port = 50100;
-const char *host = "192.168.100.44";
+const char *host = "192.168.106.45";
 
 float voltage_value = 0.0;
 String output = "";
@@ -79,7 +80,7 @@ void loop()
       rpm = client.readStringUntil(' ');
       Serial.println("b'START + " + motor_direction + " + " + rpm + "'");
     }
-    else if(input == "X")
+    else if(input == "X" || input == "XX")
     {
       start_flag = false;
       stop_test();
